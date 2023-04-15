@@ -1,0 +1,50 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: #213547;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: rgb(33, 53, 71);
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.nav-list {
+  font-weight: 600;
+}
+
+.colored-text {
+  color: #14b789;
+}
+
+.btn {
+  background-color: #14b789;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.darkNav {
+  background-color: rgba(33, 53, 71, 0.3);
+  backdrop-filter: blur(1.5rem);
+}
+.lightNav {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1.5rem);
+}
