@@ -1,6 +1,8 @@
 import { useState } from "react";
 import lineLight from "./assets/line.svg";
 import lineDark from "./assets/line-dark.svg";
+import point from "./assets/point.svg";
+import "./index.css";
 
 export default function Experience({ dark }) {
   const workedPlaces = [
@@ -24,7 +26,7 @@ export default function Experience({ dark }) {
       ],
       technologies: ["Python", "UML", "Software Architecture", "Unit Testing"],
       timeline: "March 2023-April 2023",
-      isClicked: true,
+      isClicked: false,
     },
     {
       name: "Hulu Express",
@@ -34,7 +36,7 @@ export default function Experience({ dark }) {
       ],
       technologies: ["Figma", "Adobe XD"],
       timeline: "June 2022- September 2022",
-      isClicked: true,
+      isClicked: false,
     },
     {
       name: "Hope Enterprise University College",
@@ -54,28 +56,81 @@ export default function Experience({ dark }) {
         "Java",
       ],
       timeline: " February 2022-present",
-      isClicked: true,
+      isClicked: false,
     },
   ];
 
+  const [activeIndex, setActiveIndex] = useState(0);
+
   function LeftSide() {
-    workedPlaces.map((place) => {
-      return (
-        <div className="place">
-          <div className="place-name">{place.name}</div>
+    return (
+      <div className="max-md:overflow-x-auto">
+        <div className="max-md:scrollable-menu flex md:flex-col">
+          {workedPlaces.map((place, index) => {
+            return (
+              <button
+                key={index}
+                className={`place-name flex-shrink-0 flex justify-start py-4 px-6 md:text-xl max-md:text-lg ${
+                  dark
+                    ? activeIndex === index
+                      ? "isClicked"
+                      : "notClickedLight"
+                    : activeIndex === index
+                    ? "isClicked"
+                    : "notClickedDark"
+                }`}
+                onClick={() => {
+                  setActiveIndex(index);
+                }}
+              >
+                {place.name}
+              </button>
+            );
+          })}
         </div>
-      );
-    });
+      </div>
+    );
+  }
+
+  function RightSide() {
+    return (
+      <div className="Right-side-container flex flex-col gap-6 md:w-1/2">
+        <div className="position md:text-2xl md:font-medium max-md:text-xl max-md:font-medium">
+          {workedPlaces[activeIndex].role}
+        </div>
+        <div className="timeline w-fit px-4 max-md:py-2 flex md:justify-center max-md:justify-start md:font-medium max-md:text-sm">
+          {workedPlaces[activeIndex].timeline}
+        </div>
+        {workedPlaces[activeIndex].work.map((work, index) => {
+          return (
+            <div className="work-container flex flex-row gap-6 max-md:font-normal">
+              <img src={point} className="w-2" alt="point" />
+              <div className="work">{work}</div>
+            </div>
+          );
+        })}
+      </div>
+    );
   }
 
   return (
-    <div className="Experience flex flex-row justify-center md:mx-16 md:my-32 max-md:mt-16 max-md:mx-6 ">
-      <div className="md:text-4xl max-md:text-2xl flex flex-row gap-6 justify-center">
-        <div className="md:text-4xl max-md:text-2xl">01. My Experience</div>
-        <img class="w-1/4" src={dark ? lineLight : lineDark} alt="line" />
+    <div className="Experience justify-center md:mx-16 md:my-32 max-md:mt-16 max-md:mx-6 ">
+      <div className="md:text-4xl max-md:text-2xl flex flex-row gap-6 ">
+        <div className="md:text-4xl max-md:text-2xl">010. My Experience</div>
+        <img
+          class="max-md:hidden w-1/4"
+          src={dark ? lineLight : lineDark}
+          alt="line"
+        />
       </div>
-      <div className="Experience-Container">
-        <div className="places" workedPlaces={workedPlaces}></div>
+      <div className="Experience-Container flex md:flex-row max-md:flex-col justify-start md:gap-44 max-md:gap-6 pt-10">
+        <div
+          className="places flex md:flex-col max-md:flex-row"
+          workedPlaces={workedPlaces}
+        >
+          <LeftSide />
+        </div>
+        <RightSide />
       </div>
     </div>
   );

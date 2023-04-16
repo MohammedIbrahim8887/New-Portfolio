@@ -6,6 +6,9 @@ import Header from "./Header";
 import Home from "./Home";
 import About from "./About";
 import Experience from "./Experience";
+import Projects from "./Projects";
+import Testimonial from "./Testimonial";
+
 export default function App() {
   const [dark, setTheme] = useState(true);
 
@@ -26,6 +29,8 @@ export default function App() {
       <Home dark={dark} />
       <About dark={dark} />
       <Experience dark={dark} />
+      <Projects dark={dark} />
+      <Testimonial dark={dark} />
     </div>
   );
 }

@@ -32,7 +32,7 @@ export default function Header({ onClick, dark }) {
   };
 
   return (
-    <div className="nav relative">
+    <div className="nav relative z-50">
       <div
         className={`Header fixed top-0 left-0 right-0 ${
           dark ? "lightNav" : "darkNav"
@@ -62,8 +62,8 @@ export default function Header({ onClick, dark }) {
         </div>
         <div
           className={`md:hidden mobile-nav ${
-            openNav ? "" : "hidden"
-          } flex justify-center pb-6 fixed top-32 left-0 right-0`}
+            openNav ? (dark ? "lightNav" : "darkNav") : "hidden"
+          } flex justify-center pb-6 fixed top-18 left-0 right-0`}
         >
           <ul className="flex flex-col text-center gap-2">
             <li className="nav-list">HOME</li>

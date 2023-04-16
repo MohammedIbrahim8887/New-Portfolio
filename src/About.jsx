@@ -34,8 +34,12 @@ export default function About({ dark }) {
       </div>
       <div className="left-about md:w-1/2 flex flex-col self-center">
         <div className="about-header flex flex-row gap-6">
-          <div className="md:text-4xl max-md:text-2xl">00. About Me</div>
-          <img class="w-2/5" src={dark ? lineLight : lineDark} alt="line" />
+          <div className="md:text-4xl max-md:text-2xl">001. About Me</div>
+          <img
+            class="max-md:hidden w-2/5"
+            src={dark ? lineLight : lineDark}
+            alt="line"
+          />
         </div>
         <img src={codingMan} className="md:hidden my-10" />
         <div className="small-text-about flex flex-col text-justify md:text-xl max-md:text-md gap-6 md:mt-10 md:w-5/6 md:tracking-wide">
