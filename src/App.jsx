@@ -8,6 +8,7 @@ import About from "./About";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Testimonial from "./Testimonial";
+import Contact from "./Contact";
 
 export default function App() {
   const [dark, setTheme] = useState(true);
@@ -31,6 +32,7 @@ export default function App() {
       <Experience dark={dark} />
       <Projects dark={dark} />
       <Testimonial dark={dark} />
+      <Contact dark={dark} />
     </div>
   );
 }

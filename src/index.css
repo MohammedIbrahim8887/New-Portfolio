@@ -92,3 +92,19 @@ body {
   background-color: #2f3d44;
   filter: drop-shadow(0px 4px 0.8rem rgba(20, 183, 137, 0.15));
 }
+.inputLight {
+  border: rgba(38, 50, 56, 0.5) solid 1px;
+  transition-delay: 0.5s;
+}
+.inputDark {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: rgba(20, 183, 137, 0.5) solid 1px;
+  transition: 0.5s;
+}
+
+.inputLight:focus,
+.inputDark:focus {
+  outline: rgba(20, 183, 137, 1) solid 1px;
+  transition-delay: 0.5s;
+  transition: 0.5s;
+}
