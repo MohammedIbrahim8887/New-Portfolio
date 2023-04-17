@@ -5,6 +5,9 @@ import qouteOpen from "./assets/qouteOpen.svg";
 import qouteClose from "./assets/qouteClose.svg";
 import lineLight from "./assets/line.svg";
 import lineDark from "./assets/line-dark.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 export default function Testimonial({ dark }) {
   const testimony = [
@@ -41,6 +44,9 @@ export default function Testimonial({ dark }) {
       const isSelected = index === selectedPersonIndex;
       return (
         <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay={100 * index}
           className={`person flex flex-row md:gap-6 md:mb-6 ${
             dark ? "notClickedTestimonialLight" : "notClickedTestimonialDark"
           } w-full p-4`}
@@ -65,7 +71,12 @@ export default function Testimonial({ dark }) {
 
   function Word() {
     return (
-      <div className="relative word-container flex flex-col gap-6 w-[50rem] h-[30rem]">
+      <div
+        className="relative word-container flex flex-col gap-6 w-[50rem] h-[30rem]"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="500"
+      >
         <div className="absolute top-0 left-0 right-0">
           <img src={qouteOpen} alt="qouteIcon" className="md:w-16" />
         </div>
@@ -92,10 +103,20 @@ export default function Testimonial({ dark }) {
                     : "notClickedTestimonialDark"
                 } flex flex-col p-4 rounded-lg h-80`}
               >
-                <div className="flex justify-center">
+                <div
+                  className="flex justify-center"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                >
                   <img src={person.image} alt={person.name} className="" />
                 </div>
-                <div className="qoute-holder">
+                <div
+                  className="qoute-holder"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                >
                   <div>
                     <img src={qouteOpen} className="w-[0.8rem]" />
                   </div>
@@ -104,10 +125,20 @@ export default function Testimonial({ dark }) {
                     <img src={qouteClose} className="w-[0.8rem]" />
                   </div>
                 </div>
-                <p className="flex justify-center text-lg font-medium">
+                <p
+                  className="flex justify-center text-lg font-medium"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                >
                   {person.name}
                 </p>
-                <div className="flex justify-center text-sm mx-6 text-center ">
+                <div
+                  className="flex justify-center text-sm mx-6 text-center "
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="400"
+                >
                   <p>{person.place}</p>
                 </div>
               </div>
@@ -119,8 +150,15 @@ export default function Testimonial({ dark }) {
   }
 
   return (
-    <div className="Testimonial flex flex-col md:mx-16 md:my-32 max-md:mt-24 max-md:mx-6">
-      <div className="about-header flex flex-row gap-6 md:my-16 max-md:my-6">
+    <div
+      className="Testimonial flex flex-col md:mx-16 md:my-32 max-md:mt-24 max-md:mx-6"
+      id="Testimonial"
+    >
+      <div
+        className="about-header flex flex-row gap-6 md:my-16 max-md:my-6"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div className="md:text-4xl max-md:text-2xl">
           100. Time to Brag a little
         </div>

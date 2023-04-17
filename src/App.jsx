@@ -9,6 +9,7 @@ import Experience from "./Experience";
 import Projects from "./Projects";
 import Testimonial from "./Testimonial";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 export default function App() {
   const [dark, setTheme] = useState(true);
@@ -33,6 +34,7 @@ export default function App() {
       <Projects dark={dark} />
       <Testimonial dark={dark} />
       <Contact dark={dark} />
+      <Footer dark={dark} />
     </div>
   );
 }

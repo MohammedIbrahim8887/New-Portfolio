@@ -10,6 +10,9 @@ import ExpertsWay from "./assets/Expertsway.png";
 import mobileMesob from "./assets/mesobmobile.png";
 import mobileHope from "./assets/ictMobile.png";
 import mobileExperts from "./assets/expertswaymobile.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 export default function Projects({ dark }) {
   const projects = [
@@ -49,6 +52,9 @@ export default function Projects({ dark }) {
     return projects.map((project, index) => {
       return (
         <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="500"
           className={`max-md:hidden showcase-holder flex flex-row gap-10 my-6 ${
             index % 2 !== 0 ? "flex-row-reverse" : ""
           }`}
@@ -68,17 +74,36 @@ export default function Projects({ dark }) {
               {project.description}
             </div>
             <div className="technologies flex flex-row text-sm md:gap-6 md:px-6 justify-end">
-              {project.technologies.map((tech) => {
-                return <div className="tech">{tech}</div>;
+              {project.technologies.map((tech, index) => {
+                return (
+                  <div
+                    className="tech"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay={200 * index}
+                  >
+                    {tech}
+                  </div>
+                );
               })}
             </div>
             <div className="links flex flex-row justify-end md:gap-6 md:px-6">
-              <div className="github">
+              <div
+                className="github"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
                 <a href={project.links.github}>
                   <img src={dark ? githubLight : githubDark} alt="github" />
                 </a>
               </div>
-              <div className="demo">
+              <div
+                className="demo"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              >
                 <a href={project.links.demo}>
                   <img src={dark ? demoLight : demoDark} alt="demo" />
                 </a>
@@ -105,24 +130,53 @@ export default function Projects({ dark }) {
               : "rgba(38, 50, 56, 0.8)",
           }}
         >
-          <div className="title md:text-2xl max-md:text-xl font-semibold ">
+          <div
+            className="title md:text-2xl max-md:text-xl font-semibold "
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
             {project.name}
           </div>
-          <div className={`description font-medium `}>
+          <div
+            className={`description font-medium `}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             {project.description}
           </div>
           <div className="technologies flex flex-row text-sm gap-4">
-            {project.technologies.map((tech) => {
-              return <div className="tech">{tech}</div>;
+            {project.technologies.map((tech, index) => {
+              return (
+                <div
+                  className="tech"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay={300 * index}
+                >
+                  {tech}
+                </div>
+              );
             })}
           </div>
           <div className="links flex flex-row max-md:gap-4">
-            <div className="github">
+            <div
+              className="github"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
               <a href={project.links.github}>
                 <img src={dark ? githubLight : githubDark} alt="github" />
               </a>
             </div>
-            <div className="demo">
+            <div
+              className="demo"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
               <a href={project.links.demo}>
                 <img src={dark ? demoLight : demoDark} alt="demo" />
               </a>
@@ -134,8 +188,15 @@ export default function Projects({ dark }) {
   }
 
   return (
-    <div className="Projects flex flex-col justify-between md:mx-16 md:my-32 max-md:mt-24 max-md:mx-6">
-      <div className="about-header flex flex-row md:justify-end  gap-6 md:mb-10">
+    <div
+      className="Projects flex flex-col justify-between md:mx-16 md:my-32 max-md:mt-24 max-md:mx-6"
+      id="Projects"
+    >
+      <div
+        className="about-header flex flex-row md:justify-end  gap-6 md:mb-10"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div className="md:text-4xl max-md:text-2xl">
           011. Some things I've Built
         </div>

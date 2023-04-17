@@ -3,6 +3,9 @@ import lineLight from "./assets/line.svg";
 import lineDark from "./assets/line-dark.svg";
 import point from "./assets/point.svg";
 import "./index.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 export default function Experience({ dark }) {
   const workedPlaces = [
@@ -69,6 +72,9 @@ export default function Experience({ dark }) {
           {workedPlaces.map((place, index) => {
             return (
               <button
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={100 * index}
                 key={index}
                 className={`place-name flex-shrink-0 flex justify-start py-4 px-6 md:text-xl max-md:text-lg ${
                   dark
@@ -94,7 +100,12 @@ export default function Experience({ dark }) {
 
   function RightSide() {
     return (
-      <div className="Right-side-container flex flex-col gap-6 md:w-1/2">
+      <div
+        className="Right-side-container flex flex-col gap-6 md:w-1/2"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="1000"
+      >
         <div className="position md:text-2xl md:font-medium max-md:text-xl max-md:font-medium">
           {workedPlaces[activeIndex].role}
         </div>
@@ -103,7 +114,12 @@ export default function Experience({ dark }) {
         </div>
         {workedPlaces[activeIndex].work.map((work, index) => {
           return (
-            <div className="work-container flex flex-row gap-6 max-md:font-normal">
+            <div
+              className="work-container flex flex-row gap-6 max-md:font-normal"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={1000 * index}
+            >
               <img src={point} className="w-2" alt="point" />
               <div className="work">{work}</div>
             </div>
@@ -114,8 +130,16 @@ export default function Experience({ dark }) {
   }
 
   return (
-    <div className="Experience justify-center md:mx-16 md:my-32 max-md:mt-16 max-md:mx-6 ">
-      <div className="md:text-4xl max-md:text-2xl flex flex-row gap-6 ">
+    <div
+      className="Experience justify-center md:mx-16 md:my-32 max-md:mt-16 max-md:mx-6 "
+      id="Experience"
+    >
+      <div
+        className="md:text-4xl max-md:text-2xl flex flex-row gap-6 "
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="100"
+      >
         <div className="md:text-4xl max-md:text-2xl">010. My Experience</div>
         <img
           class="max-md:hidden w-1/4"
