@@ -63,7 +63,7 @@ export default function Home({ dark }) {
             Hello there, <br />
             I'm <span className="colored-text">Mohammed Ibrahim</span>
           </p>
-          <img src={codingMan} className="md:hidden" />
+          <img src={codingMan} className="md:hidden" alt="Coding Man" />
           <p className="small-text-home md:text-xl max-md:text-md text-justify md:my-10 md:tracking-wide">
             I'm a{" "}
             <span className="colored-text" id="skill">
@@ -75,7 +75,7 @@ export default function Home({ dark }) {
             user-friendly, human-centered products.
           </p>
           <button className="btn flex flex-row gap-4 max-md:w-3/4 justify-center self-center ">
-            <img src={download} />
+            <img src={download} alt="download" />
             My Resume
           </button>
         </div>
