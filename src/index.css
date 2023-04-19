@@ -140,3 +140,7 @@ body {
     opacity: 1;
   }
 }
+
+button {
+  background-color: transparent;
+}
