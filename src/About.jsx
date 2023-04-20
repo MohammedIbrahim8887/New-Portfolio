@@ -1,7 +1,7 @@
 import { useState } from "react";
 import lineLight from "./assets/line.svg";
 import lineDark from "./assets/line-dark.svg";
-import codingMan from "./assets/coding-man.svg";
+import codingMan from "./assets/coding-man.webp";
 import point from "./assets/point.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -40,7 +40,7 @@ export default function About({ dark }) {
       className="About flex flex-row justify-between md:mx-16 md:my-32 max-md:mt-24 max-md:mx-6 "
       id="About"
     >
-      <div className="right-about">
+      <div className="max-md:hidden right-about w-1/2 mr-10">
         <img
           src={codingMan}
           alt=""

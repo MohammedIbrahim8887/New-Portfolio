@@ -1,6 +1,6 @@
 import lineLight from "./assets/line.svg";
 import lineDark from "./assets/line-dark.svg";
-import coffeeMan from "./assets/coffeeMan.svg";
+import coffeeMan from "./assets/coffeeMan.webp";
 import telegram from "./assets/telegram.svg";
 import github from "./assets/githubDark.svg";
 import linkedin from "./assets/linkedin.svg";
@@ -166,12 +166,12 @@ export default function Contact({ dark }) {
           <Form />
         </div>
         <div
-          className="right-side-contact "
+          className="right-side-contact md:w-1/2"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="800"
         >
-          <img src={coffeeMan} alt="Coffee Man" className="" />
+          <img src={coffeeMan} alt="Coffee Man" />
         </div>
       </div>
     </div>

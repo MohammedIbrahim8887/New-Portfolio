@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import codingMan from "./assets/coding-man.svg";
+import codingMan from "./assets/coding-man.webp";
 import download from "./assets/download.svg";
 import scrolldowndark from "./assets/scrolldown-dark.svg";
 import scrolldownlight from "./assets/scrolldown-light.svg";
@@ -85,7 +85,7 @@ export default function Home({ dark }) {
           </div>
         </div>
         <div
-          className="max-md:hidden right-home"
+          className="max-md:hidden right-home w-1/2"
           data-aos="fade-left"
           data-aos-anchor="#example-anchor"
           data-aos-offset="500"

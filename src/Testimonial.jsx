@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import person from "./assets/person.png";
+import person from "./assets/person.webp";
 import qouteOpen from "./assets/qouteOpen.svg";
 import qouteClose from "./assets/qouteClose.svg";
 import lineLight from "./assets/line.svg";
