@@ -85,7 +85,7 @@ export default function Home({ dark }) {
           </div>
         </div>
         <div
-          className="max-md:hidden right-home w-1/2"
+          className="max-md:hidden right-home"
           data-aos="fade-left"
           data-aos-anchor="#example-anchor"
           data-aos-offset="500"
