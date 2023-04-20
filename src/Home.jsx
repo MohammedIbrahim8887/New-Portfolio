@@ -74,12 +74,14 @@ export default function Home({ dark }) {
             <span className="colored-text">{places[2]}</span> on creating
             user-friendly, human-centered products.
           </p>
-          <a href="src/assets/Resume.pdf" download="Resume.pdf">
-            <button className="btn flex flex-row gap-4 max-md:w-3/4 justify-center self-center ">
-              <img src={download} alt="download" />
-              My Resume
-            </button>
-          </a>
+          <div className="flex max-md:w-3/4 justify-center self-center">
+            <a href="./assets/Resume.pdf" download="Resume.pdf">
+              <button className="btn flex flex-row gap-4 justify-center self-center ">
+                <img src={download} alt="download" />
+                My Resume
+              </button>
+            </a>
+          </div>
         </div>
         <div
           className="max-md:hidden right-home"
