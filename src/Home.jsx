@@ -6,6 +6,7 @@ import scrolldownlight from "./assets/scrolldown-light.svg";
 import "./index.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Resume from "./assets/Resume.pdf";
 AOS.init();
 
 export default function Home({ dark }) {
@@ -74,8 +75,8 @@ export default function Home({ dark }) {
             <span className="colored-text">{places[2]}</span> on creating
             user-friendly, human-centered products.
           </p>
-          <div className="flex max-md:w-3/4 justify-center self-center">
-            <a href="./assets/Resume.pdf" download="Resume.pdf">
+          <div className="flex max-md:w-3/4 max-md:justify-center max-md:self-center">
+            <a href={Resume} download="Resume.pdf">
               <button className="btn flex flex-row gap-4 justify-center self-center ">
                 <img src={download} alt="download" />
                 My Resume
