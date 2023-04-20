@@ -11,7 +11,7 @@ export default function Experience({ dark }) {
   const workedPlaces = [
     {
       name: "AWURA",
-      role: "Flutter & Lead UI/UX Intern",
+      role: "Lead UI/UX Intern",
       work: [
         "Worked as the Lead UI/UX designer in creating 3 products which have 200k+ downloads on the GooglePlay Store",
         "Helped the Flutter development team in creating fast, usable, and extensive user experience",
