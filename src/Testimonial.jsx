@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import person from "./assets/person.webp";
+import esubalew from "./assets/esubalew.webp";
+import nebil from "./assets/Nebil.webp";
+import zewengel from "./assets/Zewengel.webp";
+import bedri from "./assets/bedri.webp";
 import qouteOpen from "./assets/qouteOpen.svg";
 import qouteClose from "./assets/qouteClose.svg";
 import lineLight from "./assets/line.svg";
@@ -12,28 +15,43 @@ AOS.init();
 export default function Testimonial({ dark }) {
   const testimony = [
     {
-      image: person,
+      image: nebil,
       name: "Nebil Ibrahim",
       place: "Hulu Express, CEO",
-      word: "Lorem ipsum dolor sit amet consectetur. At ut at at justo at tempor. Nunc lobortis vel parturient faucibus mauris non. ",
+      word: `Mohammed joined our startup with minimal experience and managed to exceed our expectations.
+      He is a quick learner with the ability to multitask with ease. He completed his task on schedule and with ease. 
+      His eagerness to learn new things that are outside of his comfort zone is also remarkable. I strongly recommend him since he is a quick learner who can fit in anyplace, both socially and technically.
+
+      `,
     },
     {
-      image: person,
+      image: esubalew,
       name: "Esubalew Amenu",
       place: "AWURA,Lead Developer",
-      word: "Lorem ipsum dolor sit amet consectetur. At ut at at justo at tempor. Nunc lobortis vel parturient faucibus mauris non. ",
+      word: `Mohammed Ibrahim is an incredibly skilled and professional UI/UX designer. 
+             He exceeded our expectations by turning our ideas into a visually stunning and user-friendly interface.
+             Mohammed listened carefully to our needs and created a seamless user experience that made our product easy to use and navigate. 
+             Thanks to his exceptional design skills, we were able to launch on time and with great success. 
+             I highly recommend him to anyone looking for a talented UI/UX designer to bring their vision to life. `,
     },
     {
-      image: person,
+      image: zewengel,
       name: "Zewengel",
       place: "Hope Enterprise University College, ICT Head",
-      word: "Lorem ipsum dolor sit amet consectetur. At ut at at justo at tempor. Nunc lobortis vel parturient faucibus mauris non.",
+      word: `Mohammed has been a tremendous help in inspiring HEUC students by hosting numerous seminars and trainings.
+      He has been assisting the ICT office in the development of various systems while learning along the way.
+      He is an extremely friendly person who works hard to complete tasks. He is a highly professional individual, both as a student and as the Vice-President of the ICT Club, for which we are grateful. 
+
+       `,
     },
     {
-      image: person,
+      image: bedri,
       name: "Bedri Elias",
       place: "Saint Mary's University, Computer Science Student",
-      word: "Lorem ipsum dolor sit amet consectetur. At ut at at justo at tempor. Nunc lobortis vel parturient faucibus mauris non.",
+      word: `Mohammed is a very competent individual who is assisting me and many others in learning the actual meaning of programming.
+      Starting with solving problems and progressing to the design of user interfaces that generate seamless interactions.
+      I appreciate what he has done for the community and am certain that he will continue to do so. 
+         `,
     },
   ];
 
@@ -49,7 +67,7 @@ export default function Testimonial({ dark }) {
           data-aos-delay={100 * index}
           className={`person flex flex-row md:gap-6 md:mb-6 ${
             dark ? "notClickedTestimonialLight" : "notClickedTestimonialDark"
-          } w-full p-4`}
+          } w-3/4 p-4`}
           style={{
             backgroundColor: isSelected ? "#14b789" : "",
             color: isSelected ? "white" : "",
@@ -57,8 +75,8 @@ export default function Testimonial({ dark }) {
           key={index}
           onClick={() => setSelectedPersonIndex(index)}
         >
-          <div className="person-img my-auto ">
-            <img src={person.image} alt={person.name} className="w-9/12 " />
+          <div className="person-img my-auto w-1/12">
+            <img src={person.image} alt={person.name} className="rounded-3xl" />
           </div>
           <div className="person-info flex flex-col gap-2">
             <div className="text-xl font-medium">{person.name}</div>
@@ -80,10 +98,10 @@ export default function Testimonial({ dark }) {
         <div className="absolute top-0 left-0 right-0">
           <img src={qouteOpen} alt="qouteIcon" className="md:w-16" />
         </div>
-        <div className="absolute top-44 left-6 text-lg md:text-xl font-medium px-16">
+        <div className="absolute top-32 left-6 text-lg md:text-xl font-medium px-16">
           {testimony[selectedPersonIndex].word}
         </div>
-        <div className="absolute bottom-10 right-0">
+        <div className="absolute bottom-0 right-0">
           <img src={qouteClose} alt="qouteIcon" className="md:w-16" />
         </div>
       </div>
@@ -101,15 +119,19 @@ export default function Testimonial({ dark }) {
                   dark
                     ? "notClickedTestimonialLight"
                     : "notClickedTestimonialDark"
-                } flex flex-col p-4 rounded-lg h-80`}
+                } flex flex-col p-4 rounded-lg h-[30rem]`}
               >
                 <div
-                  className="flex justify-center"
+                  className="flex justify-center w-1/4 self-center"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="100"
                 >
-                  <img src={person.image} alt={person.name} className="" />
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    className="rounded-full"
+                  />
                 </div>
                 <div
                   className="qoute-holder"

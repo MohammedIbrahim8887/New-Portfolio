@@ -144,3 +144,6 @@ body {
 button {
   background-color: transparent;
 }
+.person {
+  cursor: pointer;
+}
