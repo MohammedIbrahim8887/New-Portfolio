@@ -34,7 +34,7 @@ export default function Projects({ dark }) {
         "A website for a Portuguese restaurant in Lisbon, Portugal. It shows the restaurant's menu, location, and contact information.",
       links: {
         github: "https://github.com/MohammedIbrahim8887/Mesob.io",
-        demo: "https://mohammedibrahim8887.github.io/Mesob.io/",
+        demo: "https://www.mesoblisbon.com",
       },
       image: { desktop: Mesob, mobile: mobileMesob },
     },
